@@ -1,6 +1,4 @@
 :root {
-    --black: black;
-    --draft-background: #343348;
     --item-purple: #6149da;
     --item-white: #fefff9;
     --item-black: #343348;
@@ -9,37 +7,41 @@
     --transparent-purple: #4b4cad1a;
     --grey-normal: #aeaeae;
     --purple-card: #3d2081;
-    --grey-dark: #797979;
-    --greengratis: #34a853;
-    --grey-lighter: #e7e7e7;
-    --grey-light: #f0f0f0;
-    --grey-light-2: #ccc;
     --color: #b4a5fd;
     --color-text:#ecf0f1;
+
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --navbar-bg: #f8f9fa;
+    --navbar-text: #000000;
+    --button-bg: #ffffff;
+    --button-text: #000000;
+    --button-border: #000000;
 }
 body {
     color: var(--color-text);
-    background-color: #fff;
     min-height: 100%;
     margin: 0;
-    font-family: system-ui,Arial,monospace,sans-serif;
+    font-family: "Roboto",system-ui,Arial,monospace,sans-serif;
     font-size: 14px;
     line-height: 20px;
     font-size: 14px;
     transition-property: none;
 }
 .navbar {
-  background-color: var(--item-purple);
+  background-color: var(--purple-card);
+  color:var(--white);
 }
-
-.navbar .nav-link {
-  color: var(--item-white);
+body,.navbar,.card,.btn,.form-control,.dropdown-menu{
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s,border-color 0,3 ease;
 }
-
-.navbar .nav-link:hover {
-  color: var(--greengratis);
+.btn, .btn-outline-dark {
+    background-color: var(--item-purple);
+    color: var(--white);
+    border-color: var(--purple-card);
 }
-
-.navbar-brand {
-  color: var(--item-white);
+.btn:hover {
+    background-color: var(--purple-card);
+    color: var(--item-white);
+    border-color: var(--purple-card);
 }

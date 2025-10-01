@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto</title>
-  <script src="../js/script.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="../css/style.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="../js/script.js"></script>
 </head>
 <body>
-  <header id="navbar-container"></header>
+  <header id="navbar-container"><!--navbar reutilizable--></header>
   <main>
     <div class="container mt-5">
       <h1>Contacto</h1>
-      <form>
+      <form id="contactForm" novalidate>
         <div class="mb-3">
-          <label for="name" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+          <label for="name" class="form-label">Nombre <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="name" placeholder="Tu nombre" required aria-required="true" aria-describedby="nameHelp">
+          <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
         </div>
         <div class="mb-3">
-          <label for="email" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control" id="email" placeholder="Tu correo electronico"></div></form></div>
+          <label for="email" class="form-label">Correo Electrónico <span class="text-danger">*</span></label>
+          <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico" required aria-required="true" aria-describedby="emailHelp">
+          <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mensaje <span class="text-danger">*</span></label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje aquí" required aria-required="true"></textarea>
+          <div class="invalid-feedback">Por favor, escribe un mensaje.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
   </main>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/formValidation.js"></script>
 </body>
 </html>
