@@ -28,6 +28,9 @@ body {
     font-size: 14px;
     transition-property: none;
 }
+body {
+  background-color: var(--color);
+}
 .navbar {
   background-color: var(--purple-card);
   color:var(--white);
